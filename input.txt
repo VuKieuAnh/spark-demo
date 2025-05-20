@@ -1,0 +1,2 @@
+Apache Spark is fast and powerful.
+Spark is used for big data processing.
