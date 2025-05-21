@@ -16,7 +16,8 @@ spark = SparkSession.builder \
 order_rdd = spark.sparkContext.textFile("orders_67000.txt")
 mapped_rdd = order_rdd.map(lambda x: (x.split(",")[3], 1))
 reduce_rdd = mapped_rdd.reduceByKey(lambda x,y: x+y)
-print(reduce_rdd.collect())
 
+sorted_rdd=reduce_rdd.sortBy(lambda x: x[1], False)
+print(sorted_rdd.take(10))
 # Dừng Spark
 spark.stop()
