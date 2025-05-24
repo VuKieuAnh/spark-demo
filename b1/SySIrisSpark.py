@@ -70,3 +70,17 @@ acc3 = train_on_sys_sample(rdd3)
 print(f"Accuracy SyS Sample 1: {acc1:.2f}")
 print(f"Accuracy SyS Sample 2: {acc2:.2f}")
 print(f"Accuracy SyS Sample 3: {acc3:.2f}")
+
+# In ra nội dung của từng RDD
+print("===== Sample 1 =====")
+for row in rdd1.collect():
+    print(row)
+
+print("\n===== Sample 2 =====")
+for row in rdd2.collect():
+    print(row)
+
+print("\n===== Sample 3 =====")
+for row in rdd3.collect():
+    print(row)
+
